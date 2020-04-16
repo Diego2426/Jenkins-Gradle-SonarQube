@@ -10,13 +10,7 @@ pipeline {
             sh "ls"
             sh "gradle build"
 
-     }
-
-         post {
-            success {
-               echo 'Success'
-            }
-         }
+        }
       }
    }
 }

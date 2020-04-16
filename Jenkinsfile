@@ -1,11 +1,7 @@
 pipeline {
    agent any
-   stages {
-      stage('Build') {
-         steps {
-            // Get some code from a GitHub repository
-            sh 'build'
-        }
-      }
-   }
+   void build() {
+    stage name: 'build', concurrency: 1
+    gradle 'build'
+}
 }

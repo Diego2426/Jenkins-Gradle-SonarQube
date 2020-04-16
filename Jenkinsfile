@@ -5,7 +5,6 @@ pipeline {
          steps {
             // Get some code from a GitHub repository
             sh "ls"
-            sh "gradle build"
         }
       }
    }

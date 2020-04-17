@@ -3,17 +3,17 @@ pipeline {
    stages { 
          stage('Version') { 
                      steps { 
-                            sh 'gradle --version'
+                            bat 'gradle --version'
                      }
          }
          stage('Clean') { 
                      steps { 
-                            sh './build clean'
+                            bat './build clean'
                      }
          }
          stage('Build') { 
                      steps { 
-                            sh './build build'
+                            bat './build build'
                      }
          } 
    }

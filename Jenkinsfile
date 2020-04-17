@@ -3,11 +3,10 @@ pipeline {
    stages { 
          stage('Build') { 
                      steps { 
-                        node {
                            withGradle {
                            sh './gradle build'
                            }
-                        } 
+                         
                      } 
          } 
    }

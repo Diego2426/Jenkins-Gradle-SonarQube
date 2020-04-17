@@ -3,7 +3,9 @@ pipeline {
    stages { 
          stage('Version') { 
                      steps { 
+                        script {
                             sh 'gradle --version'
+                        }
                      }
          }
          stage('Clean') { 

@@ -3,8 +3,11 @@ pipeline {
    stages { 
          stage('Build') { 
                      steps { 
-                        // Get some code from a GitHub repository 
-                        sh './build gradle' 
+                        node {
+  withGradle {
+    sh './gradlew build'
+  }
+} 
                      } 
          } 
    }

@@ -4,18 +4,18 @@ pipeline {
          stage('Version') { 
                      steps { 
                         script {
-                            sh 'build --version'
+                            sh './build --version'
                         }
                      }
          }
          stage('Clean') { 
                      steps { 
-                            sh 'gradle clean'
+                            sh './build clean'
                      }
          }
          stage('Build') { 
                      steps { 
-                            sh 'gradle build'
+                            sh './build build'
                      }
          } 
    }

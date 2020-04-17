@@ -8,12 +8,12 @@ pipeline {
          }
          stage('Clean') { 
                      steps { 
-                            bat 'build clean'
+                            bat 'gradle clean'
                      }
          }
          stage('Build') { 
                      steps { 
-                            bat 'build build'
+                            bat 'gradle build'
                      }
          } 
    }

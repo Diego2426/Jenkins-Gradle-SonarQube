@@ -8,12 +8,12 @@ pipeline {
          }
          stage('Clean') { 
                      steps { 
-                            bat './build clean'
+                            bat 'build clean'
                      }
          }
          stage('Build') { 
                      steps { 
-                            bat './build build'
+                            bat 'build build'
                      }
          } 
    }

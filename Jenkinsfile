@@ -4,7 +4,7 @@ pipeline {
          stage('Version') { 
                      steps { 
                         script {
-                            sh './build --version'
+                            sh 'build.gradle --version'
                         }
                      }
          }

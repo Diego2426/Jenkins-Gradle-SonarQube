@@ -1,6 +1,4 @@
-pipeline {
-   agent any
-   node { 
+node { 
          stage('Build') { 
                      steps { 
                            withGradle {
@@ -9,5 +7,3 @@ pipeline {
                          
                      } 
          } 
-   }
-}

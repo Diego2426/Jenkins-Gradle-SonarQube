@@ -7,7 +7,7 @@ version = '1.0'
 
 sonarqube {
     properties {
-        property 'sonar.projectName', 'Example of SonarQube Scanner for Graddle Usage'
+        property 'sonar.Sonartest', 'Example of SonarQube Scanner for Graddle Usage'
     }
 }
 

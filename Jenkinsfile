@@ -4,7 +4,7 @@ pipeline {
          stage('Version and Content') { 
                      steps { 
                             bat 'gradle --version'
-                            bat 'ls'
+                            bat 'dir'
                      }
          }
          stage('Clean') { 

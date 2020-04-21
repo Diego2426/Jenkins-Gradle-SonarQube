@@ -1,7 +1,7 @@
 pipeline {
    agent any
    stages { 
-         /*stage('Version and Content') { 
+         stage('Version and Content') { 
                      steps { 
                             bat 'gradle --version'
                             bat 'dir'
@@ -17,13 +17,17 @@ pipeline {
                             bat 'gradle build'
                      }
                      post {
-                            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+                        success {
+                            echo 'AWESOME SUCCESS!'
+                            emailext body: 'New Update Available', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'New Update!'
+                            echo 'Updates Sended!'
+                        }
                      }
-         }*/
-         stage('Sonar Scanner') { 
+         }
+         /*stage('Sonar Scanner') { 
                      steps { 
                             bat 'gradle sonarqube'
                      }
-         }
+         }*/
    }
 }

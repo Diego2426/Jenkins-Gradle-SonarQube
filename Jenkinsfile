@@ -1,7 +1,7 @@
 pipeline {
    agent any
    stages { 
-         stage('Version and Content') { 
+         /*stage('Version and Content') { 
                      steps { 
                             bat 'gradle --version'
                             bat 'dir'
@@ -23,11 +23,11 @@ pipeline {
                             echo 'Updates Sended!'
                         }
                      }
-         }
-         /*stage('Sonar Scanner') { 
-                     steps { 
-                            bat 'gradle sonarqube'
-                     }
          }*/
+         stage('Sonar Scanner') { 
+                     steps { 
+                            bat 'gradle sonarqube --debug'
+                     }
+         }
    }
 }

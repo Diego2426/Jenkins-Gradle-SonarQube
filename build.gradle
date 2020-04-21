@@ -14,6 +14,7 @@ sonarqube {
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'jacoco'
+apply plugin: org.sonarqube.gradle.SonarQubePlugin
 
 repositories {
     jcenter()

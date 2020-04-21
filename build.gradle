@@ -8,7 +8,7 @@ version = '1.0'
 sonarqube {
     properties {
         property 'sonar.sourceEncoding', 'Example of SonarQube Scanner for Graddle Usage'
-        property 'sonar.host.url', project.properties.sonar ?:
+        property 'sonar.host.url', project.properties.sonar ?: 'http://137.135.80.188/'
     }
 }
 

@@ -16,6 +16,9 @@ pipeline {
                      steps { 
                             bat 'gradle build'
                      }
+                     post {
+                            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+                     }
          }
          stage('Sonar Scanner') { 
                      steps { 

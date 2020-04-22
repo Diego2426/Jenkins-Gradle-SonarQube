@@ -26,8 +26,7 @@ pipeline {
          }*/
          stage('Sonar Scanner') { 
                      steps { 
-                            //bat 'gradle sonarqube --stacktrace'
-                            bat 'sonar-scanner'
+                            bat 'gradlew sonarqube --stacktrace'
                      }
          }
    }

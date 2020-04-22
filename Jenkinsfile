@@ -6,7 +6,7 @@ pipeline {
                             bat 'gradle --version'
                             //bat 'dir'
                      }
-         }
+         }*/
          stage('Clean') { 
                      steps { 
                             bat 'gradle clean'
@@ -19,10 +19,9 @@ pipeline {
                      post {
                         success {
                             echo 'AWESOME SUCCESS!'
-                            emailext body: 'New Update Available', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'New Update!'
-                            echo 'Updates Sended!'
+                            //emailext body: 'New Update Available', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'New Update!'
                         }
                      }
-         }*/
+         }
    }
 }

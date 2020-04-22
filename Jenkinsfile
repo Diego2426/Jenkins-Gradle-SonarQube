@@ -24,18 +24,11 @@ pipeline {
                         }
                      }
          }*/
-         stage('SonarQube analysis') {
-                     def scannerHome = tool 'SonarScanner 4.0';
-                     withSonarQubeEnv('http://localhost:9000') { // If you have configured more than one global server connection, you can specify its name
-                     /*bat 'gradle sonarqube'
-                     bat 'sonar-scanner'*/
-                     bat '${scannerHome}/bin/sonar-scanner'
-    }
-  }
-         /*stage('Sonar Scanner') { 
+         stage('Sonar Scanner') { 
                      steps { 
-                            bat 'gradle sonarqube --stacktrace'
+                            //bat 'gradle sonarqube --stacktrace'
+                            bat 'sonar-scanner'
                      }
-         }*/
+         }
    }
 }

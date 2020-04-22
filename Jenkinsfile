@@ -23,5 +23,9 @@ pipeline {
                         }
                      }
          }
+         stage('Sonar') { 
+                     steps { 
+                            bat 'gradle sonarqube'
+                     }
    }
 }

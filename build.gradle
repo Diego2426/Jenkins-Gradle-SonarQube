@@ -7,7 +7,7 @@ version = '1.0'
 
 sonarqube {
     properties {
-        property 'sonar.sourceEncoding', 'Example of SonarQube Scanner for Graddle Usage'
+        property "sonar.branch", "Master"
     }
 }
 

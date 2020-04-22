@@ -27,5 +27,6 @@ pipeline {
                      steps { 
                             bat 'gradle sonarqube'
                      }
+         }
    }
 }

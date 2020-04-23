@@ -1,9 +1,0 @@
-node { 
-         stage('Build') { 
-                           withGradle {
-                           sh 'gradle --version'
-                           }
-                         
-                      
-         } 
-}

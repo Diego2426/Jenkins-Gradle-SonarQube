@@ -6,7 +6,7 @@ pipeline {
                             bat 'gradle --version'
                             //bat 'dir'
                      }
-         }*/
+         }
          stage('Clean') { 
                      steps { 
                             bat 'gradle clean'
@@ -22,7 +22,7 @@ pipeline {
                             //emailext body: 'New Update Available', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'New Update!'
                         }
                      }
-         }
+         }*/
          stage('Sonar') { 
                      steps { 
                             bat 'gradle sonarqube'

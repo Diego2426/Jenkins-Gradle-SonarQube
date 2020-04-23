@@ -8,7 +8,9 @@ version = '1.0'
 sonarqube {
     properties {
         property "sonar.tests", "/."
-        property "sonar.jacoco.reportPath", "/."    }
+        property "sonar.jacoco.reportPath", "/."    
+        property 'sonar.projectName', "Jenkins-Gradle-SonarQube-Pipeline"
+        }
 }
 
 apply plugin: 'java'

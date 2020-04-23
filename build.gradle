@@ -7,7 +7,8 @@ version = '1.0'
 
 sonarqube {
     properties {
-        property "sonar.groovy.jacoco.reportPath", "/."
+        property "sonar.tests", "/."
+        property 'sonar.projectName', 'Test'
     }
 }
 

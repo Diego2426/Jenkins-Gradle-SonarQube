@@ -8,7 +8,7 @@ version = '1.0'
 sonarqube {
     properties {
         property "sonar.tests", "/."
-        gradle sonarqube -Psonar=http://localhost:9000
+        gradle sonarqube -P sonar=http://localhost:9000
         }
 }
 

@@ -8,8 +8,7 @@ version = '1.0'
 sonarqube {
     properties {
         property "sonar.tests", "/."
-        property 'sonar.projectName', 'Test'
-    }
+        property "sonar.jacoco.reportPath", "/."    }
 }
 
 apply plugin: 'java'

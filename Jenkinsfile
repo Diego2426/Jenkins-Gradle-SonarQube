@@ -26,8 +26,6 @@ pipeline {
          stage('Sonar') { 
                      steps { 
                             bat 'gradle sonarqube'
-                            bat 'gradle sonarqube -P sonar=http://localhost:9000'
-
                      }
          }
    }

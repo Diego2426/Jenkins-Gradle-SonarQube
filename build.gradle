@@ -8,8 +8,7 @@ version = '1.0'
 sonarqube {
     properties {
         property "sonar.tests", "/."
-        property "sonar.jacoco.reportPath", "/."    
-        property 'sonar.projectName', "Jenkins-Gradle-SonarQube-Pipeline"
+        gradle sonarqube -Psonar=http://localhost:9000
         }
 }
 

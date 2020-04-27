@@ -1,11 +1,8 @@
 properties([pipelineTriggers([githubPush()])])
 
 node {
-    stage('Version and Content') { 
-                     steps { 
-                            bat 'gradle --version'
-                            //bat 'dir'
-                     }
+         stage ('Checkout'){
+                     git branch: 'master', url: 'https://github.com/Diego2426/Jenkins-Gradle-SonarQube.git'
          }
          stage('Clean') { 
                      steps { 

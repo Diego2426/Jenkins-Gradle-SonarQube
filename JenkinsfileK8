@@ -9,7 +9,8 @@ podTemplate(
         node('jenkins-jenkins-slave'){
             stage('Clean'){
                 container('jnlp'){
-                git branch: 'master',
+                sh 'cat /var/lib/jenkins/.ssh'
+                    git branch: 'master',
                     credentialsId: 'fae0aff1-88f7-41d0-b373-f0f6e509b919',
                     url: 'https://github.com/Diego2426/Jenkins-Gradle-SonarQube.git'
                     sh 'gradle clean'

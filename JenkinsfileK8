@@ -3,7 +3,7 @@ podTemplate(
     label: 'jenkins-jenkins-slave',
     containers: [
         containerTemplate(name: 'jnlp', image:'jenkins/jnlp-slave:3.27-1'),
-        containerTemplate(name: 'gradle', image:'gradle'),
+        containerTemplate(name: 'gradle:6.2.2', image:'gradle'),
     ],
     {
         node('jenkins-jenkins-slave'){

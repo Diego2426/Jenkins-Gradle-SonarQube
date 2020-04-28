@@ -1,0 +1,27 @@
+podTemplate(
+    name: 'default',
+    label: 'jenkins-jenkins-slave',
+    containers: [
+        containerTemplate(name: 'jnlp', image:'jenkins/jnlp-slave:3.27-1'),
+        containerTemplate(name: 'python', image:'python'),
+    ],
+    {
+        node('jenkins-jenkins-slave'){
+            stage('Build'){
+                container('jnlp'){
+                
+                }
+            }
+            stage('script'){
+                container('python'){
+                    git branch: 'master',
+                    credentialsId: 'fae0aff1-88f7-41d0-b373-f0f6e509b919',
+                    url: 'https://gitlab.digitalcoedevops.com/coe/internal/slack-python-birthdays.git'
+                    sh 'pip3 install jira'
+                    sh 'pip3 install slackclient'
+                    sh 'python Jira_Birthdays.py'
+                }
+            } 
+        }
+    }
+)

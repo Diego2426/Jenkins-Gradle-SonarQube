@@ -11,7 +11,7 @@ podTemplate(
                 container('jnlp'){
                 git branch: 'master',
                     credentialsId: 'fae0aff1-88f7-41d0-b373-f0f6e509b919',
-                    url: 'https://gitlab.digitalcoedevops.com/coe/internal/mobile-xamarin-rewards.git'
+                    url: 'https://github.com/Diego2426/Jenkins-Gradle-SonarQube.git'
                     sh 'gradle clean'
                 }
             }
@@ -19,7 +19,7 @@ podTemplate(
                 container('gradle'){
                     git branch: 'master',
                     credentialsId: 'fae0aff1-88f7-41d0-b373-f0f6e509b919',
-                    url: 'https://gitlab.digitalcoedevops.com/coe/internal/mobile-xamarin-rewards.git'
+                    url: 'https://github.com/Diego2426/Jenkins-Gradle-SonarQube.git'
                     sh 'gradle build'
                 }
             }
@@ -28,7 +28,7 @@ podTemplate(
             container('gradle'){
                     git branch: 'master',
                     credentialsId: 'fae0aff1-88f7-41d0-b373-f0f6e509b919',
-                    url: 'https://gitlab.digitalcoedevops.com/coe/internal/mobile-xamarin-rewards.git'
+                    url: 'https://github.com/Diego2426/Jenkins-Gradle-SonarQube.git'
                     sh 'gradle sonarqube'
                 }
             }*/

@@ -20,7 +20,7 @@ podTemplate(
                     sh 'gradle clean'
                 }
             }
-            stage('Build2'){
+            stage('Build-App'){
                 container('gradle'){
                     git branch: 'master',
                     credentialsId: 'c09431dd-cd05-40c7-910e-584ba22d6653',

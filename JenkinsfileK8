@@ -7,6 +7,11 @@ podTemplate(
     ],
     {
         node('jenkins-jenkins-slave'){
+            stage('Build'){
+                container('jnlp'){
+                
+                }
+            }
             stage('Clean'){
                 container('gradle'){
                     git branch: 'master',
@@ -15,7 +20,7 @@ podTemplate(
                     sh 'gradle clean'
                 }
             }
-            stage('Build'){
+            stage('Build2'){
                 container('gradle'){
                     git branch: 'master',
                     credentialsId: 'c09431dd-cd05-40c7-910e-584ba22d6653',

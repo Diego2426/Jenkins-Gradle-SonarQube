@@ -14,9 +14,6 @@ podTemplate(
             }
             stage('Clean'){
                 container('gradle'){
-                    git branch: 'master',
-                    credentialsId: 'c09431dd-cd05-40c7-910e-584ba22d6653',
-                    url: 'https://github.com/Diego2426/Jenkins-Gradle-SonarQube.git'
                     sh 'gradle --version'
                 }
             }

@@ -10,7 +10,7 @@ podTemplate(
             stage('Clean'){
                 container('jnlp'){
                     git branch: 'master',
-                    credentialsId: 'e35c4076f625812beb47f9b3251ff5974d5d55d99335bb741036ccbde865faa7',
+                    credentialsId: 'c09431dd-cd05-40c7-910e-584ba22d6653',
                     url: 'https://github.com/Diego2426/Jenkins-Gradle-SonarQube.git'
                     sh 'gradle clean'
                 }
@@ -18,7 +18,7 @@ podTemplate(
             stage('Build'){
                 container('gradle'){
                     git branch: 'master',
-                    credentialsId: 'fae0aff1-88f7-41d0-b373-f0f6e509b919',
+                    credentialsId: 'c09431dd-cd05-40c7-910e-584ba22d6653',
                     url: 'https://github.com/Diego2426/Jenkins-Gradle-SonarQube.git'
                     sh 'gradle build'
                 }
@@ -27,7 +27,7 @@ podTemplate(
             {
             container('gradle'){
                     git branch: 'master',
-                    credentialsId: 'fae0aff1-88f7-41d0-b373-f0f6e509b919',
+                    credentialsId: 'c09431dd-cd05-40c7-910e-584ba22d6653',
                     url: 'https://github.com/Diego2426/Jenkins-Gradle-SonarQube.git'
                     sh 'gradle sonarqube'
                 }

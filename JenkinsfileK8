@@ -12,7 +12,7 @@ podTemplate(
             }
             stage('Clean'){
                 container('gradle'){
-                    sh 'gradle -v'
+                    sh 'gradle clean'
                 }
             }
             /*stage('Build-App'){

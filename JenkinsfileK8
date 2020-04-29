@@ -1,12 +1,11 @@
 podTemplate(
     name: 'default',
-    label: 'jenkins-jenkins-slave',
     containers: [
         containerTemplate(name: 'jnlp', image:'jenkins/jnlp-slave:3.27-1'),
         containerTemplate(name: 'gradle', image:'gradle'),
     ],
     {
-        node('jenkins-jenkins-slave'){
+        node('POD_LABEL'){
             stage('Build'){
                 container('jnlp'){
                 

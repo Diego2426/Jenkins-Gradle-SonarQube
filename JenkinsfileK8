@@ -13,7 +13,7 @@ podTemplate(
             container('gradle'){
                 stage('Clean'){
                 //container('gradle'){
-                    sh 'echo ESTA MIERDA NO FUNCIONA'
+                    sh 'echo FUNCIONA'
                 }
             }
             /*stage('Build-App'){

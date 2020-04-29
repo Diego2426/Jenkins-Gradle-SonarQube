@@ -10,8 +10,9 @@ podTemplate(
         
                 }
             }
-            stage('Clean'){
-                container('gradle'){
+            container('gradle'){
+                stage('Clean'){
+                //container('gradle'){
                     sh 'echo ESTA MIERDA NO FUNCIONA'
                 }
             }

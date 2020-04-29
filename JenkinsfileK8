@@ -5,7 +5,7 @@ podTemplate(
         containerTemplate(name: 'gradle', image:'gradle'),
     ],
     {
-        node('POD_LABEL'){
+        node(POD_LABEL){
             stage('Build'){
                 container('jnlp'){
                 

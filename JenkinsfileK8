@@ -7,12 +7,12 @@ podTemplate(
         node(POD_LABEL){
             stage('Build'){
                 container('jnlp'){
-                
+        
                 }
             }
             stage('Clean'){
                 container('gradle'){
-                    sh 'gradle clean'
+                    sh 'echo ESTA MIERDA NO FUNCIONA'
                 }
             }
             /*stage('Build-App'){

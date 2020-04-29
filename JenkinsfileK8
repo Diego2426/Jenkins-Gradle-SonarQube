@@ -11,9 +11,9 @@ podTemplate(
                 
                 }
             }
-            container('gradle'){
-                stage('Clean'){
-                    sh 'gradle --version'
+            stage('Clean'){
+                container('gradle'){
+                    sh 'gradle -v'
                 }
             }
             /*stage('Build-App'){

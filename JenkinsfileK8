@@ -12,24 +12,19 @@ podTemplate(
             }*/
               stage('Clean'){
                 container('gradle'){
-                    sh 'echo funciona'
-                    emailext body: 'New Update Available', to: 'orozco.diego@uabc.edu.mx', from: 'diego.orozco@softtek.com', subject: 'New Update!'
+                    sh 'gradle clean'
                 }
             }
-            /*stage('Build-App'){
+            stage('Build-App'){
                 container('gradle'){
-                    git branch: 'master',
-                    credentialsId: 'c09431dd-cd05-40c7-910e-584ba22d6653',
-                    url: 'https://github.com/Diego2426/Jenkins-Gradle-SonarQube.git'
                     sh 'gradle build'
+                    //Comando para mandar correo
+                    //emailext body: 'New Update Available', to: 'orozco.diego@uabc.edu.mx', from: 'diego.orozco@softtek.com', subject: 'New Update!'
                 }
             }
-            stage('Sonar')
+            /*stage('Sonar')
             {
             container('gradle'){
-                    git branch: 'master',
-                    credentialsId: 'c09431dd-cd05-40c7-910e-584ba22d6653',
-                    url: 'https://github.com/Diego2426/Jenkins-Gradle-SonarQube.git'
                     sh 'gradle sonarqube'
                 }
             }*/

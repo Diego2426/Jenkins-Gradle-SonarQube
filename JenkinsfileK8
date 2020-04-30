@@ -13,7 +13,7 @@ podTemplate(
               stage('Clean'){
                 container('gradle'){
                     sh 'echo funciona'
-                    emailext body: 'New Update Available', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'New Update!'
+                    emailext body: 'New Update Available', to: 'orozco.diego@uabc.edu.mx', from: 'diego.orozco@softtek.com', subject: 'New Update!'
                 }
             }
             /*stage('Build-App'){

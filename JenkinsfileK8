@@ -22,12 +22,12 @@ podTemplate(
                     //emailext body: 'New Update Available', to: 'orozco.diego@uabc.edu.mx', from: 'diego.orozco@softtek.com', subject: 'New Update!'
                 }
             }
-            /*stage('Sonar')
+            stage('Sonar')
             {
             container('gradle'){
                     sh 'gradle sonarqube'
                 }
-            }*/
+            }
         }
     }
 )

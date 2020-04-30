@@ -13,8 +13,8 @@ podTemplate(
               stage('Version and Clean'){
                 container('gradle'){
                     sh 'gradle -v'
-                    sh 'gradle check'
-                    sh 'gradle clean'
+                    //sh 'gradle check'
+                    //sh 'gradle clean'
                 }
             }
             stage('Build-App'){

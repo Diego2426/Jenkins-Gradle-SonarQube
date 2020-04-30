@@ -1,6 +1,6 @@
 podTemplate(
     containers: [
-        //containerTemplate(name: 'jnlp', image:'jenkins/jnlp-slave:3.27-1'),
+        containerTemplate(name: 'jnlp', image:'jenkins/jnlp-slave:3.27-1'),
         containerTemplate(name: 'gradle', image:'gradle'),
     ],
     {

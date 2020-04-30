@@ -10,8 +10,9 @@ podTemplate(
         
                 }
             }*/
-              stage('Clean'){
+              stage('Version and Clean'){
                 container('gradle'){
+                    sh 'gradle -v'
                     sh 'gradle clean'
                 }
             }

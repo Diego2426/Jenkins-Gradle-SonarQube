@@ -20,9 +20,7 @@ podTemplate(
             stage('Build-App'){
                 container('gradle'){
                     sh 'gradle build'
-                    //Comando para mandar correo
-                    //emailext body: 'New Update Available', to: 'orozco.diego@uabc.edu.mx', from: 'diego.orozco@softtek.com', subject: 'New Update!'
-                }
+               }
             }
             stage('Sonar')
             {

@@ -27,6 +27,7 @@ pipeline {
                         }
                      
          }
+    }
          /*stage('Sonar') { 
                      steps { 
                             sh 'gradle sonarqube'

@@ -25,9 +25,9 @@ pipeline {
                             echo 'AWESOME SUCCESS!'
                             //emailext body: 'New Update Available', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'New Update!'
                         }
-                     }*/
+                     
          }
-         /*stage('Sonar') { 
+         stage('Sonar') { 
                      steps { 
                             sh 'gradle sonarqube'
                      }

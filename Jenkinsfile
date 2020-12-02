@@ -1,11 +1,11 @@
 pipeline {
    agent any
-   triggers {
+   /*triggers {
         pollSCM('* * * * *')
-   }
+   }*/
    
    stages { 
-         /*stage('Version and Content') { 
+         stage('Version and Content') { 
                      steps { 
                             bat 'gradle --version'
                             //bat 'dir'
@@ -26,11 +26,11 @@ pipeline {
                             //emailext body: 'New Update Available', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'New Update!'
                         }
                      }
-         }*/
-         stage('Sonar') { 
+         }
+         /*stage('Sonar') { 
                      steps { 
                             sh 'gradle sonarqube'
                      }
-         }
+         }*/
    }
 }

@@ -8,10 +8,10 @@ pipeline {
          stage('Version and Content') { 
                      steps { 
                             bat 'gradle --version'
-                            //bat 'dir'
+                            bat 'dir'
                      }
          }
-         /*stage('Clean') { 
+         stage('Clean') { 
                      steps { 
                             bat 'gradle clean'
                      }
@@ -27,7 +27,7 @@ pipeline {
                         }
                      
          }
-         stage('Sonar') { 
+         /*stage('Sonar') { 
                      steps { 
                             sh 'gradle sonarqube'
                      }

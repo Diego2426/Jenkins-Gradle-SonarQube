@@ -11,7 +11,7 @@ pipeline {
                             //bat 'dir'
                      }
          }
-         stage('Clean') { 
+         /*stage('Clean') { 
                      steps { 
                             bat 'gradle clean'
                      }
@@ -25,7 +25,7 @@ pipeline {
                             echo 'AWESOME SUCCESS!'
                             //emailext body: 'New Update Available', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'New Update!'
                         }
-                     }
+                     }*/
          }
          /*stage('Sonar') { 
                      steps { 

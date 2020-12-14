@@ -18,7 +18,7 @@ pipeline {
          }
          stage('Build') { 
                      steps { 
-                            bat 'gradle build'
+                            //bat 'gradle build'
                      }
                      post {
                         success {

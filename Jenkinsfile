@@ -7,8 +7,8 @@ pipeline {
    stages { 
          stage('Version and Content') { 
                      steps { 
-                            bat 'gradle --version'
-                            bat 'dir'
+                            sh 'gradle --version'
+                            sh 'dir'
                      }
          }
    }
